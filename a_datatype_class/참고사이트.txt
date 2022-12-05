@@ -2,6 +2,7 @@
 
 [참고 사이트]
     https://docs.python.org/3.7/library/index.html
+    https://docs.python.org/ko/3/
 
     https://dojang.io       -> 회원가입하고 퀴즈문제 하나씩 푸는 것이 도장깨기
     https://wikidocs.net/   -> 파이썬 검색
