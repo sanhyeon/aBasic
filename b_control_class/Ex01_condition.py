@@ -14,6 +14,7 @@
         elif 조건식B :
             문장들
         else :
+            pass
             문장들
 
         ` 조건식이나 else 뒤에는 콜론(:) 표시
@@ -34,10 +35,34 @@ i8=dict()
 i9={}
 i10=None
 
+a = - 1
+if a:
+    print('True')
+else:
+    print("False")
 
+a = 20
+b = 0
+if a and b:
+    print('True2') #
 
+if a or b:
+    print('True3') #
 
+print(a and b)
+print(a or b)
 
+a = 20
+b = 0
+
+if a:
+    c=2
+elif b:
+    c=4
+else :
+    c=6
+
+print(c)
 
 
 

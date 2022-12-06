@@ -1,4 +1,26 @@
+def even_filter(list=[]):
+    return [i for i in list if i % 2 == 0]
 
+print(even_filter([1, 2, 4, 5, 8, 9, 10]))
+
+def is_prime_number(num):
+    for i in range(2,num):
+        if num % i == 0:
+            return 'False'
+            break
+    return 'True'
+print(is_prime_number(60))
+print(is_prime_number(61))
+
+
+def count_vowel(txt):
+    a = txt.count("a")
+    e = txt.count("e")
+    i = txt.count("i")
+    o = txt.count("o")
+    u = txt.count("u")
+    return a+e+i+o+u
+print(count_vowel("pythonian"))
 # [추가] 함수도 객체이다
 def case1():
     print('case-1')
@@ -9,12 +31,43 @@ def case2():
 def case3():
     print('case-3')
 
+f = { 'a1' : case1,
+      'a2' : case2,
+      'a3' : case3}
+print(f['a2'])      # 객체 값 나옴
+f['a2']()           # 함수를 호출 case-2
+
+byunsu = 'a3'
+f[byunsu]()         # 함수를 호출 case-3
 
 
 #---------------------------------------
 # 글로벌 변수와 지역변수
 
+# (1)
+# temp = '글로벌'
+# def func():
+#     print('1>', temp)
+# func()
+# print('2>', temp)
 
+# (2)
+temp = '글로벌'            # 글로벌 변수 지역 변수를 나누는 기준은 함수 안에 있나라는 것이다.
+def func():
+    # print('0>', temp)
+    temp = '지역'
+    print('1>', temp)   # 지역
+func()
+print('2>', temp)       # 글로벌
+
+# (3)
+temp = '글로벌'            # 글로벌 변수를 덮어씌워서 지역 변수로 만듦
+def func():
+    global temp
+    temp = '지역'
+    print('1>', temp)   # 지역
+func()
+print('2>', temp)       # 글로벌
 
 '''
 #----------------------------------------------
@@ -26,7 +79,13 @@ def case3():
     
     종종 사용됨
 '''
+# 일반함수
+def f(x, y):
+    return x * y
+print( f(3,2) )
 
+f = lambda x, y : x*y       # 인자와 리턴값만 있는 것이 람다 함수이다
+print( f(3,2) )
 
 
 #-----------------------------------------------------------
@@ -41,8 +100,20 @@ def case3():
     
     파이썬 2.x에서는 많이 사용하던 함수이지만, 최근 문법의 복잡성으로 권장하지 않는 추세란다.
 """
+def calc(x):
+    return x*2
+data = [1,2,3,4,5]
+res = list(map(calc, data))     # map
+print(res)
 
+for i in data:
+    calc(i)
 
-
+# reduce() 구경만
+from functools import reduce
+def f(x,y):
+    return x*y
+data = [1,2,3,4,5]
+print( reduce(f, data))
 
 

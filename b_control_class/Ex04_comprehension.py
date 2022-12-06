@@ -38,18 +38,47 @@ print(alist)
 #------------------------------------------------
 # 리스트 컨프리핸션
 
+blist = [ n for n in range(1,7)]
+print(blist)
 
+blist = [ n**2 for n in range(1,7)]
+print(blist)
+
+blist = [ n for n in range(1,7) if n%2==1]
+print(blist)
 #-------------------------------------------
-# 딕셔러니 컨프리핸션
+# 컨프리핸선 아닌 코드를 컨프리핸선으로 변경
+clist = []
+for r in range(1,4):
+    for c in range(1,3):
+        clist.append((r,c))
+print(clist)
+
+#dlist = [ for r in range(1,4): for c in range(1,3) : dlist.append((r,c))]
+#print(dlist)
+
 
 
 
 #------------------------------------------------
 # 셋 컨프리핸션
 
+data = (1,2,3,2,1,4,5)
+alist = [ n for n in data]
+print(alist)
 
+bset = { n for n in data}
+print(bset) # set은 중복적인 값이 안 들어감
 
+#-------------------------------------------------
+# 딕셔러니 컨프리핸션
+data = (2,3,4)
+adic = { n: n**2 for n in data }
+print(adic)
 
+word = 'LOVE LOL'
+wcnt = { letter : word.count(letter) for letter in set(word) }
+print(wcnt)
 
 
 '''
