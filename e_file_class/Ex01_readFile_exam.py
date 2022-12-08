@@ -6,9 +6,14 @@
     존재하지 않는 파일명으로 예외가 발생해도 아무런 일을 하지 않는다
 """
 def count_words(filename):
-    pass  # pass 대신 완성
+    filename = filename
+    count_words(filename)
+    print('count_words') # pass 대신 완성
 
 # 존재하지 않는 파일명도 있음
-filenames = ['sample.xml', 'xxxx.xxx', 'temp.json']
-for filename in filenames:
-    count_words(filename)
+#     try:
+#     filenames = ['sample.xml', 'xxxx.xxx', 'temp.json']
+#     except Exception as e
+#     for filename in filenames:
+#     count_words(filename)
+#     print('존재하지 않음 ', e)

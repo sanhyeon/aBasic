@@ -15,6 +15,37 @@
 
             encoding='utf-8' : 한글
 
-    - 파일을 열고 사용 후에는 반드시 닫아야 한다
+    - 파일을 열고 사용 후에는 반드시 닫아야 한다 ( close() )
 """
+"""
+try:
+    f = open('./data/data.txt','r',encoding='utf-8')
+except FileNotFoundError as e:
+    print('파일을 찾을 수 없습니다 >', e)
+else:
+    while True:
+        line = f.readline()
+        if not line: break
+        print(line)
+    f.close()
+finally:
+    print('종료')
+
+"""
+
+# 자동으로 close() 하기 위해 with 구문
+
+#with open('data/data.txt','r',encoding='utf-8') as f:
+#    while True:
+#        line = f.readline()
+#        if not line : break
+#        print(line)
+#try:
+filename = 'data/' + 'data.txt'
+with open('data/data.txt','r',encoding='utf-8') as f:
+        content = f.read()
+        # print(content)
+        words = content.split()
+
+print('총단어수 :', len(words))
 
