@@ -1,0 +1,7 @@
+** 스크랩핑 (Scraping) 과 크롤링 (Crawling) 차이 정리하세요
+
+1. 스크랩핑 (Scraping) 과 크롤링 (Crawling) 차이 정리하세요
+
+2. urllib.request와 requests 모듈 차이점 정리하세요
+
+3. urllib.parse.urljoin()
