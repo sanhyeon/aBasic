@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+
 import time
 
 browser = webdriver.Chrome("./webdriver/chromedriver.exe")
@@ -81,3 +82,4 @@ for li in lis:
                 blog_review = "0"
 
         print(name, star, visit_review, blog_review)
+

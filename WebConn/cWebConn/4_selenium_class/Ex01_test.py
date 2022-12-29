@@ -4,7 +4,7 @@
 from selenium import webdriver
 
 # 1. webdriver 객체생성
-driver = webdriver.Chrome('./webdrive/chromedriver.exe')
+driver = webdriver.Chrome('./webdriver/chromedriver.exe')
 driver.implicitly_wait(3)
 
 # 2. 페이지 접근

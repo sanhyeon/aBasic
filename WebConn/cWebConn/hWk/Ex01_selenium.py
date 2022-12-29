@@ -12,7 +12,7 @@ map_osm = folium.Map(location=[37.572807, 126.975918],
 # (1) 페이지에서 매장명, 전화번호, 주소 추출
 
 # 웹드라이버 객체 생성
-driver = webdriver.Chrome('./webdrive/chromedriver.exe')
+driver = webdriver.Chrome('./webdriver/chromedriver.exe')
 driver.implicitly_wait(3)
 
 # 페이지 수 만큼 돌림
